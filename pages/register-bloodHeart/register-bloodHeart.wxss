@@ -1,0 +1,68 @@
+/* pages/register-bloodHeart/register-bloodHeart.wxss */
+
+/* 整体 */
+.container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 第一行字 */
+.reminder{
+  margin-top:100rpx;
+  font-size: 50rpx;
+  font-weight:bold;
+  text-align: center;
+}
+
+/* 灰色框 */
+.data-picker{
+  margin-top:60rpx;
+  border-radius: 5px;
+  background-color: #E6E6E6;
+  width:80%;
+  height:80rpx;
+}
+
+/* 灰色框中数据 */
+.data-picker text{
+  margin-left:30rpx;
+  line-height:80rpx;
+}
+
+/* 选择后写入的数字的格式 */
+.input-data{
+  font-weight:bold;
+}
+
+/* 下一页按钮 */
+.next-page{
+  align-items: center;
+  width:50%;
+  height:70rpx;
+  margin-top:90rpx;
+  border-radius: 5px;
+  text-align: center;
+  background-color: cadetblue;
+}
+/* 下一页按钮的文字 */
+.next-page text{
+  line-height: 67rpx;
+  color:white;
+}
+
+/* 跳过按钮 */
+.skip-page{
+  align-items: center;
+  width:50%;
+  height:70rpx;
+  margin-top:40rpx;
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgb(127, 129, 129);
+}
+/* 跳过按钮的文字 */
+.skip-page text{
+  line-height: 67rpx;
+  color:white;
+}

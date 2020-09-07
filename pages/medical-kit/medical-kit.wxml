@@ -1,0 +1,35 @@
+<!--pages/medical-kit/medical-kit.wxml-->
+<view class="container" bindtouchstart="touchStart" bindtouchend="touchEnd">
+
+  <view class="head">
+    <view class="head-button1">
+      <text>现用药物</text>
+    </view>
+    <view class="head-button">
+      <text>历史药物</text>
+    </view>
+  </view>
+
+  <block wx:for="{{nowMedicine}}" wx:for-item="item" wx:for-index="idx">
+    <view class="body"  bindlongtap="catchTap_{{idx}}">
+        <view class="head-button2">
+          <view >{{item.medicineName}}</view>
+        </view>
+      <view class="info">
+        <view class="single">开始服药时间：{{item.startTime}}</view>
+        <view class="single">结束服药时间：{{item.endTime}}</view>
+        <text class="single" decode="true">每日服药时间：{{item.time[0]}}&nbsp;{{item.time[1]}} &nbsp;{{item.time[2]}}</text>
+        <text class="next" decode="true">下次服药时间: &nbsp;{{item.dday}}天{{item.dhm}}小时{{item.dminm}}分钟</text>
+      </view>
+    </view>
+  </block>
+
+  <view class="addplan" catchtap="onTapAdd">
+    <view class="add">
+      <view>+</view>
+    </view>
+    <view class="plan">
+      <view>点击此处添加药物服用计划</view>
+    </view>
+  </view>
+</view>

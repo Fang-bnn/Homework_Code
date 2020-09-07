@@ -1,0 +1,109 @@
+/* pages/medicalkit/medicalkit.wxss */
+
+/* 整体 */
+.container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 第一行字 */
+.reminder{
+  margin-top:0rpx;
+  font-size: 50rpx;
+  font-weight:bold;
+  text-align: center;
+}
+
+/* 灰色框 */
+.data-picker{
+  margin-top:60rpx;
+  border-radius: 5px;
+  background-color: #E6E6E6;
+  width:80%;
+  height:80rpx;
+  align-items: center;
+}
+
+
+
+/*药物名称输入*/
+.name-input{
+  margin-top:60rpx;
+  border-radius: 5px;
+  background-color: #E6E6E6;
+  width:80%;
+  height:80rpx;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.drugname{
+  width: 270rpx;
+}
+.input-data{
+  
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+.input-block{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.input-block text{
+  margin-left:30rpx;
+  line-height:80rpx;
+}
+
+/* 灰色框中数据 */
+.data-picker text{
+  margin-left:30rpx;
+  line-height:80rpx;
+}
+
+/* 选择后写入的数字的格式 */
+.input-data{
+  font-weight:bold;
+}
+
+/*添加框*/
+.add-time{
+  margin-top: 60rpx;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: black;
+  height: 80rpx;
+  width:60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.add-time text{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 100%;
+  height: 100%;
+}
+/* 下一页按钮 */
+.next-page{
+  align-items: center;
+  width:50%;
+  height:70rpx;
+  margin-top:60rpx;
+  border-radius: 5px;
+  text-align: center;
+  background-color: cadetblue;
+}
+/* 下一页按钮的文字 */
+.next-page text{
+  line-height: 67rpx;
+  color:white;
+}
+
+.hide{
+  display: none;
+}

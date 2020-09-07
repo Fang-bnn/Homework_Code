@@ -1,0 +1,47 @@
+<!--pages/register-genderAge/register-genderAge.wxml-->
+<view class="container">
+  <text class="reminder">请完善个人资料</text>
+
+<!-- 男生/女生头像 -->
+   <view class="genderImg">
+    <image src="https://s1.ax1x.com/2020/08/17/de39GF.png" class="maleImg"
+    mode="widthFix"/>
+    <image src="https://s1.ax1x.com/2020/08/17/de1z5T.png" class="femaleImg"
+    mode="widthFix"/>
+  </view>
+  <!-- 性别单选组件 -->
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{items}}">
+      <radio class="radio" value="{{item.name}}" checked="{{item.checked}}" disabled="{{item.disabled}}" />{{item.value}}
+    </label>
+  </radio-group>
+
+<!-- 选择出生年月的滚轮 -->
+  <view class="birthday-picker">
+    <view class="result">请选择出生年月：{{year}}年{{month}}月</view>
+    <picker-view class="picker" indicator-class="indicator" value="{{value}}" bindchange="bindChange">
+      <picker-view-column class="column">
+        <view wx:for="{{years}}">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column class="column">
+        <view wx:for="{{months}}">{{item}}月</view>
+      </picker-view-column>    
+    </picker-view>
+  </view>
+
+  <modal title="是否为孕妇？" hidden="{{ismale}}" no-cancel="true" bindconfirm="bindPreConfirm">
+    <radio-group  class="radio-group"  bindchange="preRadioChange">
+      <radio class="radio" value="是孕妇" checked="{{preChecked}}"/>是孕妇
+      <radio class="radio" value="不是孕妇" checked="{{nopreChecked}}"/>不是孕妇
+    </radio-group>
+  </modal>
+
+
+
+<!-- 前往下一页的按钮 -->
+  <view class="next-page" catchtap="onTapJump">
+    <text>下一步</text>
+  </view>
+
+</view>
+

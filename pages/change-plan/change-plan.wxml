@@ -1,0 +1,58 @@
+<!--pages/medicalkit/medicalkit.wxml-->
+<view class="container">
+  <text class="reminder">添加药物服用计划</text>
+
+  <view class="name-input" >
+    <view class="input-block">
+      <text class="drugname" decode="{{true}}">药物名称:</text>
+      <input class="data-input" maxlength="10" placeholder="请输入药物名称" value="{{inputValue}}" bindinput="bindinput"/>
+    </view>
+  </view>
+
+  <!-- 开始日期选择 -->
+  <picker class="data-picker" mode="date" start="{{year}}-{{month}}-{{date}}" bindchange="bindDate1PickerChange">
+    <view class="input-block">
+      <text decode="{{true}}">开始日期:</text>
+      <text class="input-data">{{startDate}}</text>
+    </view>
+  </picker>
+
+  <!-- 结束日期选择 -->
+  <picker class="data-picker" mode="date" start="{{year}}-{{month}}-{{date}}" bindchange="bindDate2PickerChange" >
+    <view class="input-block">
+      <text decode="{{true}}">结束日期:</text>
+      <text class="input-data">{{endDate}}</text>
+    </view>
+  </picker>
+
+  <picker class="data-picker" mode="time" value="08:00" bindchange="bindTime1PickerChange">
+    <view class="input-block">
+      <text decode="{{true}}">每日服用时间1:&nbsp;</text>
+      <text class="input-data">{{time1}}</text>
+    </view>
+  </picker>
+
+  <picker class="data-picker" mode="time" value="17:00" bindchange="bindTime2PickerChange">
+    <view class="input-block">
+      <text decode="{{true}}">每日服用时间2:&nbsp;</text>
+      <text class="input-data">{{time2}}</text>
+    </view>
+  </picker>
+
+  <picker class="{{isshow3?'data-picker':'hide'}}" mode="time" value="20:00" bindchange="bindTime3PickerChange">
+    <view class="input-block">
+      <text decode="{{true}}">每日服用时间3:&nbsp;</text>
+      <text class="input-data">{{time3}}</text>
+    </view>
+  </picker>
+
+  <!--添加额外服用时间-->
+  <view class="{{isshow3?'hide':'add-time'}}" catchtap="addtime">
+    <view class="add-text">添加额外服用时间</view>
+  </view>
+
+  <!--修改完成-->
+  <view class="next-page" catchtap="onTapJump">
+    <text>完成</text>
+  </view>
+</view>

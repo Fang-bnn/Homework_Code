@@ -1,0 +1,37 @@
+<!--pages/weight-height/weight-height.wxml-->
+<!--pages/register-genderAge/register-genderAge.wxml-->
+<view class="container">
+  <text class="reminder">请完善个人资料</text>
+
+  <view class="two-picker">
+    <view class="result">请选择体重：{{wTen}}{{wOne}}kg</view>
+    <picker-view class="picker" indicator-class="indicator" value="{{valueWeight}}" bindchange="bindChangeWeight">
+      <picker-view-column class="column">
+        <view wx:for="{{wTens}}">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column class="column">
+        <view wx:for="{{wOnes}}">{{item}}</view>
+      </picker-view-column>    
+    </picker-view>
+  </view>
+
+  <view class="two-picker">
+    <view class="result">请选择身高：{{hHund}}{{hTen}}{{hOne}}cm</view>
+    <picker-view class="picker" indicator-class="indicator" value="{{valueHeight}}" bindchange="bindChangeHeight">
+      <picker-view-column class="column">
+        <view wx:for="{{hHunds}}">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column class="column">
+        <view wx:for="{{hTens}}">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column class="column">
+        <view wx:for="{{hOnes}}">{{item}}</view>
+      </picker-view-column>    
+    </picker-view>
+  </view>
+
+  <view class="next-page" catchtap="onTapJump">
+    <text>下一步</text>
+  </view>
+
+</view>

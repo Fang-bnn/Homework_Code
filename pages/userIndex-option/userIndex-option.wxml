@@ -1,0 +1,33 @@
+<!--pages/userIndex-option/userIndex-option.wxml-->
+<view class="container">
+  <view class="allItem">
+    <view class="itemSet" catchtap="bindTapAvatar">
+      <text class="itemText">头像</text>
+      <image class="icon" src="{{userAvatar}}"
+      mode="widthFix"/>
+      <view class="arrow"></view>
+    </view>
+
+    <view class="itemSet" catchtap="bindTapUsername">
+      <text class="itemText">昵称</text>
+      <text class="username">{{username}}</text>
+      <view class="arrow"></view>
+    </view>
+
+    <view class="itemSet" catchtap="bindTapPhone">
+      <text class="itemText">手机号码</text>
+      <text class="username">{{phoneNumber}}</text>
+    </view>
+  </view>
+
+  <modal class="changeName" title="修改昵称" hidden="{{isshowName}}" bindconfirm="changeName" no-cancel="true">
+    <view class="input-section">
+      <input class="nameInput" value="{{username}}" maxlength="10" bindblur="nameBlur"/>
+    </view>
+  </modal>
+
+
+  <view class="quit" catchtap="onTapQuit">
+    <text>退出登录</text>
+  </view>
+</view>  

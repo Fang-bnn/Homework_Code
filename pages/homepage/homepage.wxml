@@ -1,0 +1,64 @@
+<!-- pages/homepage/homepage.wxml -->
+<view class="container" bindtouchstart="touchStart" bindtouchend="touchEnd">
+  <!-- 眼睛图标 -->
+  <view class="eyes"> 
+    <view wx:if="{{judge==1}}">
+      <image src="https://s1.ax1x.com/2020/08/17/de3PxJ.gif" mode="aspectFit" style="height: 240rpx "></image>
+    </view>
+    <view wx:elif="{{judge==2}}">
+      <image src="https://s1.ax1x.com/2020/08/18/dMknCd.gif" mode="aspectFit" style="height: 240rpx "></image>
+    </view>
+    <view wx:else>
+      <image src="https://s1.ax1x.com/2020/08/19/dleYjJ.gif" mode="aspectFit" style="height: 240rpx "></image>
+    </view>
+  </view>
+
+
+   <!-- 用户发的话 -->
+   <view class="userwords"  style="opacity:{{0}}" animation="{{UAnimate}}" >
+     <text >{{userwords}}</text>
+   </view>
+   
+   <!-- 系统回的话 -->
+      <view class="answords"   style="opacity:{{0}}" animation="{{AnAnimate}}" catchtap="Med_onTap">
+     <text class="answords_">{{answer}}</text>
+      <view class="kuang">
+       <text class="answords_1">{{answer_1}}</text>
+       <text class="answords_2">{{answer_2}}</text>
+      </view>
+   </view>
+  
+  <!-- 语音波浪图 -->
+  <view class="wave" wx:if="{{judge_1==1}}" >
+    <image  src="https://s1.ax1x.com/2020/08/19/dlat76.gif" mode="aspectFit" style="height: 80rpx" ></image>
+  </view>
+  
+  <!-- 功能栏1 -->
+  <view class="function" >   
+   <view catchtap="scanCode" class="camera" animation="{{CAnimate}}">      
+     <image src="https://s1.ax1x.com/2020/08/17/dmXArq.png" mode="aspectFit" style="width: 80rpx; height: 80rpx" ></image>    
+   </view>
+   <view class="voice" animation="{{VAnimate}}" catchtouchstart="stdvoice" catchtouchend="endvoice" >  
+     <image src="https://s1.ax1x.com/2020/08/17/dmXkMn.png" mode="aspectFit" style="width: 120rpx; height: 120rpx; margin-left: 160rpx; margin-right: 160rpx"></image>
+   </view>
+   <view class="words" catchtap="trigger" animation="{{WAnimate}}">   
+     <image src="https://s1.ax1x.com/2020/08/17/dmXfzj.png" mode="aspectFit" style="width: 80rpx; height: 80rpx"></image>
+   </view>
+  </view>
+  
+  <!-- 功能栏2 -->
+  <view class="{{Function2?'function2':'function2_'}}" style='bottom: {{inputBottom}}'>     
+    <view catchtap="scanCode" class="camera_1" animation="{{CAnimate_1}}">   
+      <image src="https://s1.ax1x.com/2020/08/17/dmXArq.png" mode="aspectFit" style="width: 60rpx; height: 60rpx" ></image>
+    </view>
+      <input class="input_1" confirm-type="send" placeholder="聊点什么吧" bindconfirm="sendMes" value="{{inputvalue}}" adjust-position='{{false}}' bindfocus='focus' bindblur='blur' animation="{{WAnimate_1}}" ></input>   
+    <view class="voice_1" catchtap="trigger1" animation="{{VAnimate_1}}">   
+      <image src="https://s1.ax1x.com/2020/08/17/dmXkMn.png" mode="aspectFit" style="width: 80rpx; height: 80rpx"></image>
+    </view>     
+  </view>
+  
+
+
+
+
+</view> 

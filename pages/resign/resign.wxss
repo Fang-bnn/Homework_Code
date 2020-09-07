@@ -1,0 +1,96 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container_PN{
+  flex-direction: row;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  background-color:#E6E6E6;
+  border-radius: 5px;       
+  width: 500rpx;
+  height: 80rpx;            
+  margin: 250rpx;                                     
+}
+.container_PN view{
+  align-items: center;
+  margin-left: 25rpx;
+  margin-top: 20rpx;
+}
+
+.btn_getver{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500rpx;
+  height: 80rpx;
+  margin-top:-150rpx;
+  background-color: #e6f0ef;
+}
+.btn text{
+  color: #FFFFFF;
+  font-size: 30rpx;
+}
+.eyes{
+  width: 300rpx;
+}
+.showdialog{
+  display: flex;
+  border: 3rpx solid;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  flex-direction: column;
+  border-color: #666666;
+  width: 80%;
+  height: 30%;
+  margin-left: 75rpx;
+  margin-top: 100rpx;
+}
+.notshowdialog{
+  display: flex;
+  border: 3rpx solid;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  flex-direction: column;
+  border-color: #666666;
+  width: 80%;
+  height: 30%;
+  margin-left: 75rpx;
+  margin-top: 100rpx;
+  /* display: none; */
+  
+}
+.content{
+  display: flex;
+  align-items: center;
+  margin-top: 100rpx;
+}
+.iptbox{
+  width: 80rpx;
+  height: 80rpx;
+  border:1rpx solid #ddd;
+  border-radius: 0rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.ipt{
+  width: 0;
+  height: 0;
+}
+.btn-area{
+  width: 80%;
+  background-color: orange;
+  color:white;
+  margin-top: 20rpx;
+
+}
+.break{
+  width: 0rpx;
+}
+.breakfirst{
+  width: 65rpx;
+}

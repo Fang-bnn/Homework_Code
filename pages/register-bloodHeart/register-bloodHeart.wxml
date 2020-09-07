@@ -1,0 +1,43 @@
+<!--pages/register-bloodHeart/register-bloodHeart.wxml-->
+<view class="container" catchtap="bindpop">
+  <text class="reminder">请完善个人资料</text>
+
+<!-- 血糖滚轮选择 -->
+  <picker class="data-picker" bindchange="bindGluPickerChange" value="{{gluIndex}}" range="{{gluArray}}">
+      <view class="input-block">
+        <text decode="{{true}}">血糖：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+        <text class="input-data">{{gluArray[gluIndex]}}</text>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;mmol</text>
+      </view>
+  </picker>
+
+<!-- 血压双滚轮选择 -->
+  <picker class="data-picker" range="{{PrMultiArray}}" value="{{PrMultiIndex}}" mode="multiSelector" bindchange="bindBPPickerChange">
+    <view class="input-block">
+      <text decode="{{true}}">血压:&nbsp;</text>
+      <text class="input-data">{{PrMultiArray[0][PrMultiIndex[0]]}}</text>
+      <text decode="{{true}}">&nbsp;/&nbsp;</text>
+      <text class="input-data">{{PrMultiArray[1][PrMultiIndex[1]]}}</text>
+      <text>mmHg</text>
+    </view>
+  </picker>
+  
+  <!-- 心率滚轮选择 -->
+  <picker class="data-picker" bindchange="bindHeartPickerChange" value="{{heartIndex}}" range="{{heartArray}}">
+      <view class="input-block">
+        <text decode="{{true}}">心率：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+        <text class="input-data">{{heartArray[heartIndex]}}</text>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;bpm</text>
+      </view>
+  </picker>
+
+  <!-- 前往下一页的按钮 -->
+  <view class="next-page" catchtap="onTapJump">
+    <text>下一步</text>
+  </view>
+
+<!-- 跳过按钮 -->
+  <view class="skip-page" catchtap="onTapskip">
+    <text>跳过</text>
+  </view>
+</view>

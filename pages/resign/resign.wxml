@@ -1,0 +1,49 @@
+<view class="container">
+
+  <image class="eyes" src="https://s1.ax1x.com/2020/08/17/de3PxJ.gif" mode="aspectFit"/> <!--眼镜gif-->
+
+  <view class="container_PN">   <!--电话号码框-->
+
+    <view>+86</view>
+
+    <view  class="PN"><input placeholder="请输入手机号码" maxlength="11" bindblur="mobileblur" value="{{mobile}}"/></view>
+
+  </view>
+
+  <view class="Container_VN">   <!--获取验证码按钮-->
+
+    <button class="btn_getver" disabled="{{disabled}}" type="{{btnstate}}" bindtap="PN_Finish">
+
+      <text>获取验证码</text>
+
+    </button>
+
+  </view>
+
+</view>
+
+<!-- 验证码输入框 -->
+<modal hidden= "{{isshow}}" no-cancel="true" confirm-text="下一步" bindconfirm="verifyCode" title="请输入验证码" class="modal"> <!--整个弹框内容，根据isshow判断显示还是不显示，在wxss修改-->
+
+
+  <form bindsubmit="formSubmit"> 
+
+    <view class='content'> 
+
+      <block wx:for="{{Length}}" wx:key="item">
+
+       <!-- <view wx:if="{{index==0}}" class="breakfirst"></view> -->
+       
+       <!-- <view class="break"></view> -->
+
+       <input class='iptbox' value="{{Value.length>=index+1?Value[index]:''}}" password='{{ispassword}}' catchtap='Tap' type='number'></input>
+
+     </block>
+
+</view>
+     
+    <input name="password" password="{{true}}" class='ipt' maxlength="{{Length}}" focus="{{isFocus}}" bindinput="Focus" type="number" value="{{clear}}"></input>
+
+  </form>
+
+</modal>

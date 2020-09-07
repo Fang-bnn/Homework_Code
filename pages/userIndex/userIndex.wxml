@@ -1,0 +1,38 @@
+<!--pages/userIndex/userIndex.wxml-->
+<view class="container" bindtouchstart="touchStart" bindtouchend="touchEnd">
+  <image src="{{userAvatar}}" mode="widthFix" class="head"></image>
+  <text class="username">{{username}}</text>
+
+  <view class="itemSet" catchtap="bindTapOption">
+    <image class="icon" src="https://s1.ax1x.com/2020/08/19/d174U0.png"
+    mode="widthFix"/>
+    <text class="itemText">账号设置</text>
+    <view class="arrow"></view>
+  </view>
+
+  <view class="blank"></view>
+
+  <view class="allItem">
+    <view class="itemSet" catchtap="bindTapHealth">
+      <image class="icon" src="https://s1.ax1x.com/2020/08/19/d17oCT.png"
+      mode="widthFix"/>
+      <text class="itemText" decode="{{true}}">健康信息</text>
+      <view class="arrow"></view>
+    </view>
+
+    <view class="itemSet">
+      <image class="icon" src="https://s1.ax1x.com/2020/08/19/d17hEq.png"
+      mode="widthFix"/>
+      <text class="itemText">设备管理</text>
+      <view class="arrow"></view>
+    </view>
+
+    <view class="itemSet">
+      <image class="icon" src="https://s1.ax1x.com/2020/08/19/d1755V.png"
+      mode="widthFix"/>
+      <text class="itemText">我的收藏</text>
+      <view class="arrow"></view>
+    </view>
+  </view>
+
+</view>

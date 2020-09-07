@@ -1,0 +1,91 @@
+/**medicine.wxss**/
+.container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.Name{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  position:absolute;
+  top: 40rpx;
+}
+
+.name{
+  margin-bottom: 20rpx;
+  margin-left: 30rpx;
+  font-size: 50rpx;
+}
+
+
+.Ename{
+  margin-bottom: 40rpx;
+  margin-left: 30rpx;
+  font-size: 30rpx;
+}
+
+.options{
+  width:90%;
+  border-bottom:1px solid black;
+  border-top: 1px solid black;
+  position:absolute;
+  top: 200rpx;
+}
+
+
+
+.option_1{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40rpx;
+  margin-top: 40rpx;
+}
+
+.option_2{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.opbutton{
+  /* margin-left: 30rpx; */
+  margin-right: 30rpx;
+  border:2px solid gray;
+  border-radius: 60rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+.opbutton text{
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+
+.information{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+  position:fixed;
+  top: 520rpx;
+  height: 560rpx;
+}
+
+.information text{
+  margin-top: 40rpx;
+  font-size: 35rpx;
+  line-height: 50rpx;
+
+}
+
+.add{
+  width: 100%;
+  position: fixed;
+  bottom: 40rpx;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,67 @@
+/* pages/weight-height/weight-height.wxss */
+
+/* 整体 */
+.container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 第一行字 */
+.reminder{
+  margin-top:100rpx;
+  font-size: 50rpx;
+  font-weight:bold;
+  text-align: center;
+}
+
+/* 体重选择滚轮的格式设置 */
+.two-picker{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  border: 2px solid #483D8B;
+  margin-top:20rpx;
+  margin-bottom:70rpx;
+}
+
+.picker {
+  background-color: #F0FFFF;
+  width: 80%;
+  height: 140px;
+  margin-top: 10px;
+}
+
+.indicator {
+  height: 70rpx;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.column {
+  font-size: 24rpx;
+  color:black;
+  text-align: center;
+  line-height: 90rpx;
+}
+
+.result {
+  text-align: center;
+  font-weight: 900;
+}
+
+.next-page{
+  align-items: center;
+  width:50%;
+  height:70rpx;
+  margin-top:30rpx;
+  border-radius: 5px;
+  text-align: center;
+  background-color: cadetblue;
+}
+
+.next-page text{
+  line-height: 67rpx;
+  color:white;
+}

@@ -1,0 +1,7 @@
+<view class="container">
+  <image src="https://s1.ax1x.com/2020/08/17/de3PxJ.gif" class="eye" mode="aspectFit"/>
+  <image wx:if="{{imageid}}" src="https://s1.ax1x.com/2020/08/17/de3pPU.gif" mode="aspectFit" class="capsule"></image>
+  <image wx:else src="../../iamge/capsulelog.gif" mode="aspectFit" class="capsule"></image>
+  <button wx:if="{{canIUse}}" open-type="getUserInfo" class="button" plain="true" bindgetuserinfo="bindGetUserInfo" ></button> 
+  <view wx:else>请升级微信版本</view>
+</view>

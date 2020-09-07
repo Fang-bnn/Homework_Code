@@ -1,0 +1,78 @@
+<!--pages/userIndex-health/userIndex-health.wxml-->
+<view class="container">
+  <text class="titles">基本信息</text>
+  <view class="box">
+    <view class="items" catchtap="bindTapGender">
+      <text class="itemName">性别</text>
+      <text class="message">{{gender}}</text>
+      <view class="arrow"></view>
+    </view>
+       <picker class="items" range="{{BirMultiArray}}" value="{{birthMonth}}" mode="multiSelector" bindchange="bindBirPickerChange" header-text="修改出生年月">
+        <text class="itemName">出生年月</text>
+        <text class="message">{{year}}-{{month}}</text>
+        <view class="arrow-birth"></view>
+      </picker>
+    <view class="items">
+      <picker class="items" range="{{heightTriArray}}" value="{{heightValue}}" mode="multiSelector" bindchange="bindHeightPickerChange" header-text="修改身高">
+      <text class="itemName">身高</text>
+      <text class="message">{{hund}}{{ten}}{{one}}cm</text>
+      <view class="arrow-height"></view>
+      </picker>
+    </view>
+    <view class="items-bottom">
+      <picker range="{{weightMulArray}}" value="{{weightValue}}" mode="multiSelector" bindchange="bindWeightPickerChange" header-text="修改体重">
+      <text class="itemName">体重</text>
+      <text class="message">{{weightTen}}{{weightOne}}kg</text>
+      <view class="arrow-weight"></view>
+      </picker>
+    </view>
+  </view>
+
+  <text class="titles">健康信息</text>
+  <view class="box">
+    <view class="items">
+      <picker range="{{preMulArray}}" value="{{preValue}}" mode="multiSelector" bindchange="bindPrePickerChange" header-text="修改血压">
+      <text class="itemName">血压</text>
+      <text class="message">{{high}}/{{low}}mmHg</text>
+      <view class="arrow-pre"></view>
+      </picker>
+    </view>
+    <view class="items">
+      <picker range="{{gluArray}}" value="{{gluValue}}" bindchange="bindGluPickerChange" header-text="修改血糖">
+      <text class="itemName">血糖</text>
+      <text class="message">{{glu}}mmol/L</text>
+      <view class="arrow-blood"></view>
+      </picker>
+    </view>
+    <view class="items">
+      <picker range="{{heartArray}}" value="{{heartValue}}" bindchange="bindHeartPickerChange" header-text="修改心率">
+      <text class="itemName">心率</text>
+      <text class="message">{{heart}}bpm</text>
+      <view class="arrow-heart"></view>
+      </picker>
+    </view>
+    <view class="items-bottom">
+      <text class="itemName">疾病史</text>
+      <text class="message">{{illness[0]}}</text>
+      <view class="arrow"></view>
+    </view>
+  </view>
+
+  <view class="itemSet" catchtap="onTapJump">
+    <image class="icon" src="https://s1.ax1x.com/2020/08/19/d17RDs.png"
+    mode="widthFix"/>
+    <text class="itemText" decode="{{true}}">前往我的药箱</text>
+    <view class="arrow"></view>
+  </view>
+
+  <modal class="changeGender" title="性别" hidden="{{isshowGender}}"  bindconfirm="changeGender" no-cancel="true">
+    <view class="input-section">
+      <radio-group class="radio-group" bindchange="radioChange">
+        <radio class="radio" value="男" checked="{{maleChecked}}" />男
+        <radio class="radio" value="女" checked="{{femaleChecked}}" />女
+        <radio class="radio" value="女（怀孕）" checked="{{pregnantChecked}}" />女(怀孕)
+        </radio-group>
+    </view>
+  </modal>
+
+</view>

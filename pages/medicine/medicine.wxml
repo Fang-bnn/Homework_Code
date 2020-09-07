@@ -1,0 +1,41 @@
+<!--medicine.wxml-->
+<view class="container">
+  <view class="Name">
+    <text class="name">{{name}}</text>
+    <text class="Ename">{{Ename}}</text>  
+  </view>
+  
+  <view class="options">
+    <view class="option_1">
+     <view class="opbutton" style="background-color:{{bcolor_1}}" catchtap="trigger_1">
+      <text style="color:{{wcolor_1}}">适应病症</text>
+     </view>
+     <view class="opbutton" style="background-color:{{bcolor_2}}" catchtap="trigger_2">
+      <text style="color:{{wcolor_2}}">服用方法</text>
+     </view>
+     <view class="opbutton" style="background-color:{{bcolor_3}}" catchtap="trigger_3">
+      <text style="color:{{wcolor_3}}">不良反应</text>
+     </view>
+    </view>
+
+    <view class="option_2">
+     <view class="opbutton" style="background-color:{{bcolor_4}}" catchtap="trigger_4">
+      <text style="color:{{wcolor_4}}">药物禁忌</text>
+     </view>
+     <view class="opbutton" style="background-color:{{bcolor_5}}" catchtap="trigger_5">
+      <text style="color:{{wcolor_5}}">保存方法</text>
+     </view>
+     <view class="opbutton" style="background-color:{{bcolor_6}}" catchtap="trigger_6">
+      <text style="color:{{wcolor_6}}" decode="true">&nbsp;&nbsp;&nbsp;其他&nbsp;&nbsp;&nbsp;&nbsp;</text>
+     </view>
+    </view>
+  </view>
+
+  <scroll-view scroll-y="true" class="information">
+     <text>{{content}}</text>
+  </scroll-view>
+
+  <view class="add" catchtap="onTapJump">
+   <button>添加至服用计划</button>
+  </view>
+</view>

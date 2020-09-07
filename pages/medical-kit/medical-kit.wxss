@@ -1,0 +1,112 @@
+/* pages/medical-kit/medical-kit.wxss */
+.container{
+  height:1334rpx;
+}
+
+.head{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.head-button{
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+  width: 80px;
+  border-style: dashed;
+  border-width: 1px;
+  border-radius: 10px;
+}
+.head-button1{
+  background-color: gray;
+  color: white;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+  width: 80px;
+  border-style: dashed;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+.head-button2{
+  align-items: center;
+  text-align: center;
+  margin-left: 10px;
+  margin-top:60rpx;
+  width: 120px;
+  height:50rpx;
+  border-style: dashed;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+.body{
+  height: 300rpx;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid black;
+  border-bottom:1px solid black;
+  background-color: white;
+  border-width: 1px;
+}
+
+.picture{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.single{
+  margin-top: 8px;
+  font-size: 15px;
+}
+.next{
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.addplan{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+.add{
+  height: 50px;
+  width: 50px;
+  border-style: dashed;
+  border-width: 2px;
+  align-items: center;
+  display: flex;
+  font-size: 40px;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+.plan{
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+  border-right-style: dashed;
+  border-width: 1px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.hide{
+  display: none;
+}

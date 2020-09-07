@@ -1,0 +1,92 @@
+/* pages/register-genderAge/register-genderAge.wxss */
+
+/* 整体 */
+.container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 第一行字 */
+.reminder{
+  margin-top:100rpx;
+  font-size: 50rpx;
+  font-weight:bold;
+  text-align: center;
+}
+
+/* 男生/女生头像的格式设置 */
+.genderImg{
+  display:flex;
+  flex-direction: row;
+  width:60%;
+  height: 300rpx;
+  margin-top:70rpx;
+  border-top: #E6E6E6;
+}
+
+.femaleImg{
+  margin-left:70rpx;
+}
+
+/* 性别单选的格式设置 */
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.radio {
+    margin-top: 10rpx;
+    margin-left:33rpx;
+    margin-right:35rpx;
+    margin-bottom: 30rpx;
+}
+
+/* 出生年月滚轮的格式设置 */
+.birthday-picker{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  border: 1px solid #E6E6E6;
+}
+
+.picker {
+  background-color: #F0FFFF;
+  width: 80%;
+  height: 140px;
+  margin-top: 10px;
+}
+
+.indicator {
+  height: 70rpx;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.column {
+  font-size: 24rpx;
+  color:black;
+  text-align: center;
+  line-height: 90rpx;
+}
+
+.result {
+  text-align: center;
+  font-weight: 900;
+}
+
+.next-page{
+  align-items: center;
+  width:50%;
+  height:70rpx;
+  margin-top:40rpx;
+  border-radius: 5px;
+  text-align: center;
+  background-color: cadetblue;
+}
+
+.next-page text{
+  line-height: 67rpx;
+  color:white;
+}
